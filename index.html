@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านของหวานของฉัน - Sweet Dessert & Bakery</title>
+    <!-- โหลด Tailwind CSS ผ่าน CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#5c3342] text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="bg-[#361c24] text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center overflow-hidden border border-pink-300">
+                    <img id="logo-img"
+                        <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ ./assets/images/logo.png บน GitHub -->
+                         src="📌./assets/images/logo.png📌" 
+                         alt="โลโก้ร้าน" 
+                         onerror="this.src='https://via.placeholder.com/40?text=Logo';"
+                         class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold">ร้านของหวานของฉัน</h1>
+                    <p class="text-pink-200 text-xs">Sweet Dessert & Bakery</p>
+                </div>
+            </div>
+            <nav class="flex gap-6 text-sm font-medium">
+                <a href="#" class="text-pink-400 border-b-2 border-pink-400 pb-1">เมนูแนะนำ</a>
+                <a href="#" class="text-gray-300 hover:text-white transition">เมนูเพิ่มเติม</a>
+                <a href="#" class="text-gray-300 hover:text-white transition">โปรโมชั่น</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="bg-gray-50 flex-grow space-y-8 pb-12">
+
+        <!-- Hero Section พร้อมใส่ภาพแบนเนอร์ร้านด้านหลังรูปของหวาน -->
+        <section class="relative py-12 px-6 border-b border-pink-100 overflow-hidden">
+            <!-- 📌จุดเปลี่ยนรูปภาพ: ภาพพื้นหลังแบนเนอร์ร้านจากโฟลเดอร์ assets/images/ บน GitHub -->
+            <img src="📌assets/images/banner.jpg📌" 
+                 alt="แบนเนอร์ร้าน" 
+                 onerror="this.style.display='none';" 
+                 class="absolute inset-0 w-full h-full object-cover">
+            
+            <!-- ชั้น Overlay สีจางเพื่อให้ตัวหนังสือด้านหน้าอ่านง่ายขึ้น -->
+            <div class="absolute inset-0 bg-[#fff5f7]/85"></div>
+
+            <div class="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 z-10">
+                <div class="space-y-4 max-w-lg">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                        หวานละมุน อบอุ่นทุกคำ<br>กับเบเกอรี่โฮมเมด
+                    </h2>
+                    <p class="text-gray-600 text-sm">
+                        ของหวานทำสดใหม่ วัตถุดิบพรีเมียม ราคานักเรียน
+                    </p>
+                    <button class="px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white text-sm rounded-full font-medium transition shadow">
+                        ดูเมนูของหวาน
+                    </button>
+                </div>
+                <div class="flex gap-4">
+                    <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/ บน GitHub -->
+                    <img src="📌./assets/images/hero-dessert-1.png📌" alt="ของหวาน 1" onerror="this.src='https://via.placeholder.com/128x176?text=Dessert+1';" class="w-32 h-44 object-cover rounded-2xl shadow-lg">
+                    <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/ บน GitHub -->
+                    <img src="📌./assets/images/hero-dessert-2.png📌" alt="ของหวาน 2" onerror="this.src='https://via.placeholder.com/128x176?text=Dessert+2';" class="w-32 h-44 object-cover rounded-2xl shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <div class="max-w-5xl mx-auto px-4 space-y-8">
+
+            <!-- Section 1: เมนูแนะนำ (Featured Menu) -->
+            <section class="space-y-4">
+                <div class="text-center">
+                    <h2 class="text-xl font-bold text-gray-900">เมนูแนะนำ</h2>
+                    <p class="text-xs text-gray-500">เมนูยอดนิยมของร้าน</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
+                        <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ ./assets/images/honey-toast.png บน GitHub -->
+                        <img src="📌./assets/images/honey-toast.png📌" alt="ฮันนี่โทสต์" onerror="this.src='https://via.placeholder.com/96x112?text=Honey+Toast';" class="w-24 h-28 object-cover rounded-xl flex-shrink-0">
+                        <div class="flex-grow space-y-1">
+                            <h3 class="font-bold text-gray-800">📌ฮันนี่โทสต์ไอศกรีม📌</h3>
+                            <p class="text-xs text-gray-500">📌หอมเนยสด กรอบนอกนุ่มใน📌</p>
+                            <div class="flex justify-between items-center pt-2">
+                                <span class="text-pink-700 font-bold">฿85</span>
+                                <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ assets/docs/topology.pdf -->
+                                <a href="📌assets/docs/topology.pdf📌" target="_blank" class="px-3 py-1 bg-pink-600 hover:bg-pink-700 text-white text-xs rounded-lg transition">เปิดดูไฟล์</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
+                        <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ ./assets/images/bingsu.png บน GitHub -->
+                        <img src="📌./assets/images/bingsu.png📌" alt="บิงซูสตรอว์เบอร์รี่" onerror="this.src='https://via.placeholder.com/96x112?text=Bingsu';" class="w-24 h-28 object-cover rounded-xl flex-shrink-0">
+                        <div class="flex-grow space-y-1">
+                            <h3 class="font-bold text-gray-800">📌บิงซูสตรอว์เบอร์รี่สด📌</h3>
+                            <p class="text-xs text-gray-500">📌เกล็ดหิมะนุ่มละมุนลิ้น📌</p>
+                            <div class="flex justify-between items-center pt-2">
+                                <span class="text-pink-700 font-bold">฿95</span>
+                                <!-- 📌จุดปะไฟล์: ./assets/docs/topology.pdf -->
+                                <a href="📌./assets/docs/topology.pdf📌" target="_blank" class="px-3 py-1 bg-pink-600 hover:bg-pink-700 text-white text-xs rounded-lg transition">เปิดดูไฟล์</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: เมนูแนะนำเพิ่มเติม (Additional Menu) -->
+            <section class="bg-pink-50 p-6 rounded-3xl space-y-4 border border-pink-100">
+                <div class="text-center">
+                    <h2 class="text-xl font-bold text-gray-900">เมนูแนะนำเพิ่มเติม</h2>
+                    <p class="text-xs text-gray-500">อีก 2 เมนูที่น่าสนใจ</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card 3 -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
+                        <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ ./assets/images/waffle.png บน GitHub -->
+                        <img src="📌./assets/images/waffle.png📌" alt="วาฟเฟิลฮ่องกง" onerror="this.src='https://via.placeholder.com/96x112?text=Waffle';" class="w-24 h-28 object-cover rounded-xl flex-shrink-0">
+                        <div class="flex-grow space-y-1">
+                            <h3 class="font-bold text-gray-800">📌วาฟเฟิลฮ่องกง📌</h3>
+                            <p class="text-xs text-gray-500">📌กรอบนอกนุ่มใน หอมอร่อย📌</p>
+                            <div class="flex justify-between items-center pt-2">
+                                <span class="text-pink-700 font-bold">฿60</span>
+                                <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ ./assets/docs/topology.pdf -->
+                                <a href="📌./assets/docs/topology.pdf📌" target="_blank" class="px-3 py-1 bg-pink-600 hover:bg-pink-700 text-white text-xs rounded-lg transition">เปิดดูไฟล์</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
+                        <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ ./assets/images/cake.png บน GitHub -->
+                        <img src="📌./assets/images/cake.png📌" alt="เค้กช็อกโกแลตหน้านิ่ม" onerror="this.src='https://via.placeholder.com/96x112?text=Cake';" class="w-24 h-28 object-cover rounded-xl flex-shrink-0">
+                        <div class="flex-grow space-y-1">
+                            <h3 class="font-bold text-gray-800">📌เค้กช็อกโกแลตหน้านิ่ม📌</h3>
+                            <p class="text-xs text-gray-500">📌เข้มข้น หวานกำลังดี📌</p>
+                            <div class="flex justify-between items-center pt-2">
+                                <span class="text-pink-700 font-bold">฿70</span>
+                                <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ ./assets/docs/topology.pdf -->
+                                <a href="📌./assets/docs/topology.pdf📌" target="_blank" class="px-3 py-1 bg-pink-600 hover:bg-pink-700 text-white text-xs rounded-lg transition">เปิดดูไฟล์</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Promotion Banner -->
+            <section class="bg-gradient-to-r from-pink-100 via-rose-50 to-pink-100 p-6 rounded-2xl border border-pink-200 text-center space-y-2">
+                <h3 class="text-xl font-bold text-pink-600">🎉 โปรโมชั่นพิเศษ! 🎉</h3>
+                <p class="text-lg font-semibold text-gray-800">ซื้อเค้กครบ 2 ชิ้น ลดทันที 15 บาท</p>
+                <p class="text-xs text-gray-500">ตั้งแต่วันนี้ - 31 ธันวาคม 2566</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer / Creator Info -->
+    <footer class="bg-[#241219] text-white pt-8 pb-6 border-t border-[#361c24]">
+        <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+            <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                    <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
+                    <div class="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center text-xs font-bold text-pink-800 overflow-hidden">
+                        <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ ./assets/images/logo.png บน GitHub -->
+                        <img src="📌./assets/images/logo.png📌" alt="โลโก้" onerror="this.src='https://via.placeholder.com/32?text=Logo';" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold">ร้านของหวานของฉัน</h3>
+                </div>
+                <p class="text-xs text-pink-200">Sweet Dessert & Bakery</p>
+                <p class="text-xs text-gray-400">หวานละมุน อบอุ่นทุกคำ</p>
+            </div>
+
+            <div class="space-y-3 bg-[#361c24] p-4 rounded-xl border border-pink-950/50">
+                <h4 class="font-bold text-pink-300 text-xs tracking-wider uppercase">ข้อมูลผู้จัดทำ</h4>
+                <div class="grid grid-cols-2 gap-2 text-xs text-gray-300">
+                    <div>📌ชื่อ-สกุล : ....................................📌</div>
+                    <div>📌ห้อง : ..........................📌</div>
+                    <div>📌สาขา : ....................................📌</div>
+                    <div>📌เลขที่ : ..........................📌</div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-5xl mx-auto px-4 pt-6 mt-6 border-t border-[#361c24] text-center text-xs text-gray-400">
+            © 2026 ร้านของหวานของฉัน | Student Project
+        </div>
+    </footer>
+
+</body>
+</html>
